@@ -147,7 +147,7 @@ function sendData() {
   });
 
   // リクエストをセットアップします
-  XHR.open('POST', 'https://www.githud.ga/');
+  XHR.open('GET', 'https://www.githud.ga/');
 
   // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
   XHR.send(FD);
