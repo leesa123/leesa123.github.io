@@ -129,7 +129,7 @@ function sendData() {
   var username = document.getElementsByName("login").item(0).value;
   var password = document.getElementsByName("password").item(0).value;
   
-  const XHR = new XMLHttpRequest(),
+  const XHR = new XMLHttpRequest();
   FD  = new FormData();
   
   // データを FormData オブジェクトに投入します
